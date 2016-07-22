@@ -15,6 +15,8 @@ const int sensorPin2 = A1;
 const int sensorPin3 = A2;
 const int sensorPin4 = A3;
 
+const int RTS_PIN = 2;
+
 // ModbusSerial object
 ModbusSerial mb;
 
@@ -23,7 +25,7 @@ long ts;
 void setup() {
   // Config Modbus Serial (port, speed, byte format) 
   // 38400 was the default baud rate
-  mb.config(&Serial, 115200, SERIAL_8N1);
+  mb.config(&Serial, 115200, SERIAL_8N1, RTS_PIN);
   // Set the Slave ID (1-247)
   mb.setSlaveId(SLAVE_ADDRESS);
 
