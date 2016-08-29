@@ -1,48 +1,32 @@
 #include <Modbus.h>
 #include <ModbusSerial.h>
 
-//Modbus slave address
-const int SLAVE_ADDRESS = 1;
+#include "gripit_data_store.h"
+#include "gripit_modbus_data_store.h"
+#include "gripit_sensor_reader.h"
+#include "gripit_arduino_sensor_reader.h"
+#include "gripit_immediate_job_runner.h"
+#include "gripit_address_generator.h"
+#include "gripit_task.h"
+#include "gripit_arduino_random_number_generator.h"
 
-//Modbus Registers Offsets (0-9999)
-const int SENSOR_IREG1 = 1;
-const int SENSOR_IREG2 = 2;
-const int SENSOR_IREG3 = 3;
-const int SENSOR_IREG4 = 4;
-//Used Pins
-const int sensorPin1 = A0;
-const int sensorPin2 = A1;
-const int sensorPin3 = A2;
-const int sensorPin4 = A3;
-
-const int RTS_PIN = 2;
-
-// ModbusSerial object
-ModbusSerial mb;
-
-long ts;
+ModbusSerial* modbus_serial = new ModbusSerial();
+GripitDataStore* gripit_data_store = new GripitModbusDataStore(modbus_serial);
+GripitSensorReader* gripit_sensor_reader = new GripitArduinoSensorReader();
+GripitJobRunner* gripit_job_runner = new GripitImmediateJobRunner();
+GripitArduinoRandomNumberGenerator* gripit_random_number_generator = new GripitArduinoRandomNumberGenerator();
+GripitAddressGenerator* gripit_address_generator = new GripitAddressGenerator(gripit_data_store, gripit_random_number_generator);
+GripitTask *gripit_task = new GripitTask(
+	gripit_data_store, 
+	gripit_sensor_reader, 
+	gripit_address_generator, 
+	gripit_job_runner);
 
 void setup() {
-  // Config Modbus Serial (port, speed, byte format) 
-  // 38400 was the default baud rate
-  mb.config(&Serial, 115200, SERIAL_8N1, RTS_PIN);
-  // Set the Slave ID (1-247)
-  mb.setSlaveId(SLAVE_ADDRESS);
-
-  // Add SENSOR_IREG register - Use addIreg() for analog Inputs
-  mb.addIreg(SENSOR_IREG1);
-  mb.addIreg(SENSOR_IREG2);
-  mb.addIreg(SENSOR_IREG3);
-  mb.addIreg(SENSOR_IREG4);
-  
-  ts = millis();
+	gripit_data_store->setup();
 }
 
 void loop() {
-  mb.task();
-  
-  mb.Ireg(SENSOR_IREG1, analogRead(sensorPin1));
-  mb.Ireg(SENSOR_IREG2, analogRead(sensorPin2));
-  mb.Ireg(SENSOR_IREG3, analogRead(sensorPin3));
-  mb.Ireg(SENSOR_IREG4, analogRead(sensorPin4));
+  modbus_serial->task();
+  gripit_task->run();
 }

@@ -74,7 +74,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Crist\Documents\Arduino\libraries\modbus;C:\Users\Crist\Documents\Arduino\libraries\modbus\utility;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Users\Crist\Documents\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;D:\sandboxes\gripit-modbus\gripit;C:\Program Files (x86)\Arduino\hardware\tools\avr/avr/include/;C:\Program Files (x86)\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files (x86)\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Crist\Documents\Arduino\libraries\modbus;C:\Users\Crist\Documents\Arduino\libraries\modbus\utility;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Users\Crist\Documents\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;D:\sandboxes\gripit-modbus-slave\gripit;C:\Program Files (x86)\Arduino\hardware\tools\avr/avr/include/;C:\Program Files (x86)\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files (x86)\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>D:\sandboxes\gripit-modbus\gripit\__vm\.gripit.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;_VMDEBUG=1;F_CPU=16000000L;ARDUINO=10609;ARDUINO_AVR_NANO;ARDUINO_ARCH_AVR;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -84,6 +84,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Tudor\Documents\Arduino\libraries\modbus;C:\Users\Tudor\Documents\Arduino\libraries\modbus\utility;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Users\Tudor\Documents\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;D:\Bitbucket\modbus-slave\gripit;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\Users\Tudor\Documents\Arduino\libraries\modbus;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\0b5cqvby.wah\Micro Platforms\default\debuggers;C:\Users\Tudor\Documents\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\tools\avr/avr/include/;C:\Program Files (x86)\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files (x86)\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>D:\Bitbucket\modbus-slave\gripit\__vm\.gripit.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;F_CPU=16000000L;ARDUINO=10609;ARDUINO_AVR_NANO;ARDUINO_ARCH_AVR;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -118,7 +121,41 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="address_auto_assignment_job.h" />
+    <ClInclude Include="gripit_arduino_config.h" />
+    <ClInclude Include="gripit_arduino_random_number_generator.h" />
+    <ClInclude Include="gripit_address_generator.h" />
+    <ClInclude Include="gripit_arduino_sensor_reader.h" />
+    <ClInclude Include="gripit_config.h" />
+    <ClInclude Include="gripit_data_store.h" />
+    <ClInclude Include="gripit_job_runner.h" />
+    <ClInclude Include="gripit_modbus_data_store.h" />
+    <ClInclude Include="gripit_placeholder_config.h" />
+    <ClInclude Include="gripit_sensor_reader.h" />
+    <ClInclude Include="gripit_task.h" />
+    <ClInclude Include="gripit_immediate_job_runner.h" />
+    <ClInclude Include="job.h" />
+    <ClInclude Include="gripit_random_number_generator.h" />
+    <ClInclude Include="read_sensors_job.h" />
     <ClInclude Include="__vm\.gripit.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="address_auto_assignment_job.cpp" />
+    <ClCompile Include="arduino_random_number_generator.cpp" />
+    <ClCompile Include="gripit_address_generator.cpp" />
+    <ClCompile Include="gripit_arduino_sensor_reader.cpp" />
+    <ClCompile Include="gripit_data_store.cpp" />
+    <ClCompile Include="gripit_modbus_data_store.cpp" />
+    <ClCompile Include="gripit_sensor_reader.cpp" />
+    <ClCompile Include="gripit_task.cpp" />
+    <ClCompile Include="gripit_immediate_job_runner.cpp" />
+    <ClCompile Include="job.cpp" />
+    <ClCompile Include="read_sensors_job.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gripit_logic\gripit_logic.vcxproj">
+      <Project>{fd0d56ff-92f0-4180-9f3b-d3e469f4e7cf}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

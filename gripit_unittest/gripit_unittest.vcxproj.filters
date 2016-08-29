@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\mocks">
+      <UniqueIdentifier>{6d0526f7-c52b-4ee6-b26b-411e792346ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mocks">
+      <UniqueIdentifier>{e45df825-b76c-44c5-84b0-96cf641eae6c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mocks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gripit_task_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mock_gripit_data_store.cpp">
+      <Filter>Source Files\mocks</Filter>
+    </ClCompile>
+    <ClCompile Include="mock_gripit_sensor_reader.cpp">
+      <Filter>Source Files\mocks</Filter>
+    </ClCompile>
+    <ClCompile Include="read_sensors_job_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mock_gripit_job_runner.cpp">
+      <Filter>Source Files\mocks</Filter>
+    </ClCompile>
+    <ClCompile Include="gripit_immediate_job_runner_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mock_job.cpp">
+      <Filter>Source Files\mocks</Filter>
+    </ClCompile>
+    <ClCompile Include="mock_gripit_address_generator.cpp">
+      <Filter>Source Files\mocks</Filter>
+    </ClCompile>
+    <ClCompile Include="address_auto_assignment_job_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gripit_address_generator_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mock_gripit_random_number_generator.cpp">
+      <Filter>Source Files\mocks</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mocks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gripit_task_tests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mock_gripit_data_store.h">
+      <Filter>Header Files\mocks</Filter>
+    </ClInclude>
+    <ClInclude Include="mock_gripit_sensor_reader.h">
+      <Filter>Header Files\mocks</Filter>
+    </ClInclude>
+    <ClInclude Include="test_suite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="read_sensors_job_tests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mock_gripit_job_runner.h">
+      <Filter>Header Files\mocks</Filter>
+    </ClInclude>
+    <ClInclude Include="helpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gripit_immediate_job_runner_tests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mock_job.h">
+      <Filter>Header Files\mocks</Filter>
+    </ClInclude>
+    <ClInclude Include="address_auto_assignment_job_tests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mock_gripit_address_generator.h">
+      <Filter>Header Files\mocks</Filter>
+    </ClInclude>
+    <ClInclude Include="gripit_address_generator_tests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mock_gripit_random_number_generator.h">
+      <Filter>Header Files\mocks</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

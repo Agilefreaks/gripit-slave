@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gripit", "gripit.vcxproj", "{A7796A25-0BB9-48A1-B650-7239628DCDE9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gripit_unittest", "..\gripit_unittest\gripit_unittest.vcxproj", "{512F1F1D-9FB1-4081-92B2-F506F32AB86F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gripit_logic", "..\gripit_logic\gripit_logic.vcxproj", "{FD0D56FF-92F0-4180-9F3B-D3E469F4E7CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,22 @@ Global
 		{A7796A25-0BB9-48A1-B650-7239628DCDE9}.Release|x64.Build.0 = Release|x64
 		{A7796A25-0BB9-48A1-B650-7239628DCDE9}.Release|x86.ActiveCfg = Release|Win32
 		{A7796A25-0BB9-48A1-B650-7239628DCDE9}.Release|x86.Build.0 = Release|Win32
+		{512F1F1D-9FB1-4081-92B2-F506F32AB86F}.Debug|x64.ActiveCfg = Debug|x64
+		{512F1F1D-9FB1-4081-92B2-F506F32AB86F}.Debug|x64.Build.0 = Debug|x64
+		{512F1F1D-9FB1-4081-92B2-F506F32AB86F}.Debug|x86.ActiveCfg = Debug|Win32
+		{512F1F1D-9FB1-4081-92B2-F506F32AB86F}.Debug|x86.Build.0 = Debug|Win32
+		{512F1F1D-9FB1-4081-92B2-F506F32AB86F}.Release|x64.ActiveCfg = Release|x64
+		{512F1F1D-9FB1-4081-92B2-F506F32AB86F}.Release|x64.Build.0 = Release|x64
+		{512F1F1D-9FB1-4081-92B2-F506F32AB86F}.Release|x86.ActiveCfg = Release|Win32
+		{512F1F1D-9FB1-4081-92B2-F506F32AB86F}.Release|x86.Build.0 = Release|Win32
+		{FD0D56FF-92F0-4180-9F3B-D3E469F4E7CF}.Debug|x64.ActiveCfg = Debug|x64
+		{FD0D56FF-92F0-4180-9F3B-D3E469F4E7CF}.Debug|x64.Build.0 = Debug|x64
+		{FD0D56FF-92F0-4180-9F3B-D3E469F4E7CF}.Debug|x86.ActiveCfg = Debug|Win32
+		{FD0D56FF-92F0-4180-9F3B-D3E469F4E7CF}.Debug|x86.Build.0 = Debug|Win32
+		{FD0D56FF-92F0-4180-9F3B-D3E469F4E7CF}.Release|x64.ActiveCfg = Release|x64
+		{FD0D56FF-92F0-4180-9F3B-D3E469F4E7CF}.Release|x64.Build.0 = Release|x64
+		{FD0D56FF-92F0-4180-9F3B-D3E469F4E7CF}.Release|x86.ActiveCfg = Release|Win32
+		{FD0D56FF-92F0-4180-9F3B-D3E469F4E7CF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
