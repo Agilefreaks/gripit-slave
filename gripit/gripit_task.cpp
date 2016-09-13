@@ -24,7 +24,8 @@ GripitTask::~GripitTask()
 void GripitTask::run() {
 	Job *job = this->gripit_data_store->read_flag(AUTO_ASSIGNMENT_MODE_FLAG)
 		? (Job*)new AddressAutoAssignmentJob(this->gripit_data_store, this->gripit_address_generator)
-		: new ReadSensorsJob(this->gripit_data_store, this->gripit_sensor_reader);
+		: (Job*)new ReadSensorsJob(this->gripit_data_store, this->gripit_sensor_reader);
 
 	this->gripit_job_runner->run(job);
+	free(job);
 }
